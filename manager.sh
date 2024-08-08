@@ -89,8 +89,8 @@ update_client() {
     git fetch --all
     git reset --hard origin/main
     echo "LapsusClient has been updated. Restoring config.json and database.sqlite files."
-    # Comment the following lines if you don't want to restore from backups automatically
-    cp config.json.bak config.json
+    # Comment the following line(s) if you don't want to restore from backups automatically
+    # cp config.json.bak config.json
     cp database.sqlite.bak database.sqlite
 }
 
