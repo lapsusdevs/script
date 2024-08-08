@@ -89,9 +89,9 @@ update_client() {
     git fetch --all
     git reset --hard origin/main
     echo "LapsusClient has been updated. Restoring config.json and database.sqlite files."
-    # Uncomment the following lines if you want to restore from backups automatically
-    # cp config.json.bak config.json
-    # cp database.sqlite.bak database.sqlite
+    # Comment the following lines if you don't want to restore from backups automatically
+    cp config.json.bak config.json
+    cp database.sqlite.bak database.sqlite
 }
 
 # Uninstall Lapsus Client
