@@ -11,13 +11,13 @@ check_dependencies() {
     if command_exists node; then
         NODE_VERSION=$(node -v | sed 's/v//')
         if (( $(echo "$NODE_VERSION < 16" | bc -l) )); then
-            echo "Node.js version is 15 or lower. Installing Node.js 20..."
-            curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+            echo "Node.js version is 15 or lower. Installing Node.js 22..."
+            curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
             sudo apt-get install -y nodejs
         fi
     else
-        echo "Node.js is not installed. Installing Node.js 20..."
-        curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+        echo "Node.js is not installed. Installing Node.js 22..."
+        curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
         sudo apt-get install -y nodejs
     fi
 
